@@ -1,15 +1,8 @@
-import { useState } from 'react'
-import React from 'react'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import LandingPageComponent from './Components/landingPageComponent';
+import React from 'react';
 
-
-function App() {
-
+const navBarComponent = () => {
   return (
-
-<React.Fragment>
+    <React.Fragment>
       <nav className="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Navbar</a>
@@ -25,7 +18,9 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="#">Link</a>
               </li>
-
+              <li className="nav-item">
+                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                 <ul className="dropdown-menu">
@@ -41,15 +36,8 @@ function App() {
           </div>
         </div>
       </nav>
-
-      <LandingPageComponent/>
-
-
-      
     </React.Fragment>
-
-
-  )
+  );
 }
 
-export default App
+export default navBarComponent;
